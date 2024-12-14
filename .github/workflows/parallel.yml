@@ -1,0 +1,19 @@
+---
+name: Parallel jobs
+on: workflow_dispatch
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a one-line script
+        run: echo Hello, world!
+  print_full_info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print full info
+        run: sudo lshw
+  print_short_info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print short info
+        run: sudo lshw -short
